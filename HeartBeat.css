@@ -1,0 +1,40 @@
+.heart {
+	background-color: red;
+	height: 200px;
+	width: 200px;
+	margin: 200px;
+	position: relative;
+	transform: rotate(45deg);
+	animation: heatbeat 1s infinite;
+}
+
+.heart::after,
+.heart::before {
+	content: "";
+	height: 200px;
+	width: 200px;
+	position: absolute;
+	background-color: red;
+	border-radius: 50%;
+}
+.heart::after {
+	top: 0px;
+	left: -100px;
+}
+
+.heart::before {
+	top: -100px;
+	right: 0px;
+}
+
+@keyframes heatbeat {
+	0% {
+		transform: rotate(45deg) scale(1);
+	}
+	50% {
+		transform: rotate(45deg) scale(1.2);
+	}
+	100% {
+		transform: rotate(45deg) scale(1);
+	}
+}
